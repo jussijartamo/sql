@@ -1,13 +1,18 @@
 (defproject simple "0.10.5"
-  :dependencies [[org.clojure/clojure        "1.8.0"]
-                 [org.clojure/clojurescript  "1.9.908"]
-                 [reagent  "0.7.0"]
-                 [re-frame "0.10.5"]]
+  :dependencies [[org.clojure/clojure        "1.9.0"]
+                 [org.clojure/clojurescript  "1.10.339"]
+                 [org.danielsz/system "0.4.1"]
+                 [reagent  "0.8.1"]
+                 [re-frame "0.10.6"]]
+
+  :auto-clean false
 
   :plugins [[lein-cljsbuild "1.1.7"]
             [lein-figwheel  "0.5.14"]
             [lein-cljfmt "0.6.1"]
-            [lein-less "1.7.5"]]
+            [lein-less "1.7.5"]
+            [lein-ancient "0.6.15"]
+            [lein-kibit "0.1.6"]]
 
   :hooks [leiningen.cljsbuild]
   
@@ -33,6 +38,6 @@
 
   :clean-targets ^{:protect false} ["resources/public/js"]
 
-  :cljsbuild {:builds {:client {:source-paths ["src"]
+  :cljsbuild {:builds {:client {:source-paths ["src/cljs"]
                                 :compiler     {:output-dir "resources/public/js"
                                                :output-to  "resources/public/js/client.js"}}}})

@@ -1,6 +1,9 @@
 # A Simple App
 
 
+lein kibit | lein ancient
+
+
 lein cljfmt fix
 
 
