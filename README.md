@@ -31,7 +31,30 @@ lein cljfmt fix
 
 ## TODO
 
-- [ ] Clean project for push
-- [ ] 
+UI
+- [ ] Use space efficiently. At least table should use whole window.
+- [ ] DB selector. Drag'n'drop JDBC URLs.
+- [ ] Execute query button
+- [ ] Execute update button
+- [ ] Use accordions to hide/display less meaningful data. Such as schema columns.
+- [ ] Switch between SQL and scripting modes
+- [ ] Display query status
+- [ ] Display stack traces
+- [ ] Display ajax spinner
+- [ ] Animations
+- [ ] Cleanup LESS
+- [ ] Display result count
+- [ ] Lazy load result into UI
+
+APP
+- [ ] Feature to store multiple query results
+- [ ] Fix disconnect between last query and query result on UI.
+- [ ] Support code evaluation
+- [ ] Cleanup core.clj. Remove handlers from core.
+- [ ] End to end tests
+- [ ] Better testing tools
+- [ ] DB pool
+- [ ] Lazy result loading
+
 
 

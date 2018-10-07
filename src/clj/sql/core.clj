@@ -52,7 +52,6 @@
                  :on-binary (fn [ws bytes offset len]
                               (prn "Websocket binary data recived" len))}})
 
-
 (defn setup-websocket []
   (ws/configurator (live-reload #'ws-handler)))
 
@@ -68,7 +67,6 @@
   (cond
     (and row cell) (transform->value (get-in result [row cell]))
     (and cell) (mapv #(transform->value (get % cell)) result)))
-
 
 (defn handler [{{requested-uuid "uuid" row "row" cell "cell"} :query-params}]
   (let [{:keys [uuid result]} @last-query-result]

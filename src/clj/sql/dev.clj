@@ -3,6 +3,8 @@
 
 ;#'
 (defn live-reload [handler]
-  (wrap-reload handler))
+  (wrap-reload
+
+   handler))
 
 

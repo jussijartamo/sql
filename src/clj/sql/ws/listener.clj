@@ -1,12 +1,12 @@
 (ns sql.ws.listener
   (:gen-class
-    :name sql.ws.Listener
-    :extends org.eclipse.jetty.websocket.api.WebSocketAdapter
-    :exposes-methods {onWebSocketConnect superOnConnect
-                      onWebSocketClose   superOnClose}
-    :constructors {[clojure.lang.IFn clojure.lang.IFn clojure.lang.IFn clojure.lang.IFn clojure.lang.IFn] []}
-    :init init
-    :state handlers)
+   :name sql.ws.Listener
+   :extends org.eclipse.jetty.websocket.api.WebSocketAdapter
+   :exposes-methods {onWebSocketConnect superOnConnect
+                     onWebSocketClose   superOnClose}
+   :constructors {[clojure.lang.IFn clojure.lang.IFn clojure.lang.IFn clojure.lang.IFn clojure.lang.IFn] []}
+   :init init
+   :state handlers)
   (:import (sql.ws Listener)))
 
 (defn handle [^Listener instance key & args]

@@ -40,19 +40,18 @@
   (unwrap [this]
     this))
 
-
 (defn- get-headers
   "Creates a name/value map of all the request headers."
   [^HttpServletRequest request]
   (reduce
-    (fn [headers, ^String name]
-      (assoc headers
-        (.toLowerCase name Locale/ENGLISH)
-        (->> (.getHeaders request name)
-             (enumeration-seq)
-             (string/join ","))))
-    {}
-    (enumeration-seq (.getHeaderNames request))))
+   (fn [headers, ^String name]
+     (assoc headers
+            (.toLowerCase name Locale/ENGLISH)
+            (->> (.getHeaders request name)
+                 (enumeration-seq)
+                 (string/join ","))))
+   {}
+   (enumeration-seq (.getHeaderNames request))))
 
 (defn- get-client-cert
   "Returns the SSL client certificate of the request, if one exists."

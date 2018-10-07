@@ -19,7 +19,6 @@
        (resultset-seq)
        (mapv #(result->table metadata %))))
 
-
 (defn metadata->schema [connection]
   (let [metadata (.getMetaData connection)
         tables (metadata->tables :table metadata)]

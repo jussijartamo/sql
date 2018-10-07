@@ -3,7 +3,7 @@
             [clojure.pprint :as pp]
             [sql.schema :refer [metadata->schema]])
   (:import ;(org.postgresql.util PGobject)
-           (java.sql DriverManager)))
+   (java.sql DriverManager)))
 
 (def url "jdbc:postgresql://localhost:60600/test?user=test&password=test")
 (def last-query-result (atom nil))
@@ -32,6 +32,7 @@
 (defn execute [command]
   (match command
     {:command "schema"} (display-schema)
-    {:command "query" :sql sql :uuid uuid} (query sql uuid)
-    ))
+    {:command "query" :sql sql :uuid uuid} (query sql
+
+                                                  uuid)))
 
