@@ -1,16 +1,37 @@
-# A Simple App
+# SQL Editor
 
+Setup test environment and open page [http://localhost:4450/sql.html](http://localhost:4450/sql.html)
 
-lein kibit | lein ancient
+```
+lein less auto
+lein frontend
+lein example-datasource
+lein server
+```
 
+Check versions
+```
+lein ancient
+```
 
+Display dependencies
+```
+lein deps :tree
+```
+
+Check style
+```
+lein kibit
+```
+
+Format code
+```
 lein cljfmt fix
+```
+
+## TODO
+
+- [ ] Clean project for push
+- [ ] 
 
 
-lein do clean, figwheel
-http://localhost:3449/example.html
-
-### Production Version
-
-Run "`lein do clean, with-profile prod compile`" to compile an optimised 
-version, and then open `resources/public/example.html` in a browser.
