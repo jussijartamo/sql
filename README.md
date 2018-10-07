@@ -31,6 +31,9 @@ lein cljfmt fix
 
 ## TODO
 
+NEXT
+- [ ] Auto memoize top 5 querys. UI element to release result from memory. Checkbox to permanently keep.
+
 UI
 - [ ] Use space efficiently. At least table should use whole window.
 - [ ] DB selector. Drag'n'drop JDBC URLs.
